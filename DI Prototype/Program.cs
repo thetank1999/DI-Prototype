@@ -11,7 +11,7 @@ builder.ConfigureServices((services) => {
 var host = builder.Build();
 var service = host.Services;
 
-var dataProvider = service.GetService<DataProvider>();
+var dataProvider = service.GetService<DataProvider>()!;
 var stringOutput = dataProvider.PrintString("cc");
 Console.WriteLine(stringOutput);
 Console.ReadLine();
